@@ -57,7 +57,7 @@ export const getAllDb = async () => {
 };
 
 //Export a fucntion we will use to GET from the database.
-export const getOneDb = async (id) => {
+export const getDb = async (id) => {
   console.log('GET from the database');
 
   //Create a connection to the database and version we want to use.
