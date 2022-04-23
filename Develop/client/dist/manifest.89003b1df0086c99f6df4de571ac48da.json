@@ -1,7 +1,0 @@
-{
-  "name": "Text_editor",
-  "short_name": "Text_editor",
-  "orientation": "portrait",
-  "display": "standalone",
-  "start_url": "."
-}
