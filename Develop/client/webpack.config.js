@@ -24,35 +24,20 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
-      }),
+        swDest: 'service-worker.js',
+      }), 
 
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
-        name: 'Just Another Text Editor',
-        short_name: 'J.A.T.E',
-        description: 'Takes note with JavaScript',
-        background_color: '#225ca3',
-        theme_color: '#225ca3',
-        start_url: '/',
-        publicPath: '/',
-        icons: [
-          {
-            src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
-          },
-        ],
+      name:'Text_editor',
+      
       }),
-      //new NodePolyFillPlugin()
     ],
 
     module: {
       rules: [
         {
           test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
+          use: ['style-loader','css-loader'],
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -70,6 +55,8 @@ module.exports = () => {
           },
         },
       ],
+
+    
     },
   };
 };
